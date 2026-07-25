@@ -31,12 +31,10 @@
     overflow-x: hidden;
   }
 
-  /* ── SCROLLBAR ─────────────────────────── */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-  /* ── GRID NOISE BACKGROUND ─────────────── */
   body::before {
     content:'';
     position: fixed;
@@ -49,7 +47,6 @@
     z-index: 0;
   }
 
-  /* ── NAV ───────────────────────────────── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -88,7 +85,6 @@
 
   .nav-links a:hover { color: var(--accent); }
 
-  /* ── HERO ──────────────────────────────── */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -197,7 +193,6 @@
     background: rgba(0,212,255,0.08);
   }
 
-  /* floating orbs */
   .orb {
     position: fixed;
     border-radius: 50%;
@@ -210,7 +205,6 @@
   .orb-1 { width: 400px; height: 400px; background: var(--accent); top: -100px; right: -100px; }
   .orb-2 { width: 300px; height: 300px; background: var(--accent2); bottom: 20%; left: -80px; }
 
-  /* ── SECTION COMMON ─────────────────────── */
   section {
     position: relative;
     z-index: 1;
@@ -245,7 +239,6 @@
     z-index: 1;
   }
 
-  /* ── ABOUT ──────────────────────────────── */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -291,7 +284,6 @@
     letter-spacing: 1px;
   }
 
-  /* ── SKILLS ─────────────────────────────── */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -334,7 +326,6 @@
     padding: 4px 10px;
   }
 
-  /* ── PROJECTS ───────────────────────────── */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -402,7 +393,6 @@
     padding: 3px 9px;
   }
 
-  /* ── EDUCATION ──────────────────────────── */
   .edu-list {
     display: flex;
     flex-direction: column;
@@ -454,7 +444,6 @@
     display: inline-block;
   }
 
-  /* ── CONTACT ────────────────────────────── */
   .contact-box {
     background: var(--card);
     border: 1px solid var(--border);
@@ -502,7 +491,6 @@
 
   .contact-link:hover { color: var(--accent); border-color: var(--accent); }
 
-  /* ── FOOTER ─────────────────────────────── */
   footer {
     position: relative;
     z-index: 1;
@@ -514,7 +502,6 @@
     color: var(--muted);
   }
 
-  /* ── ANIMATIONS ─────────────────────────── */
   @keyframes fadeUp {
     from { opacity:0; transform: translateY(24px); }
     to   { opacity:1; transform: translateY(0); }
@@ -531,7 +518,6 @@
     transform: translateY(0);
   }
 
-  /* ── CURSOR DOT ─────────────────────────── */
   .cursor-dot {
     width: 6px; height: 6px;
     background: var(--accent);
@@ -554,7 +540,6 @@
     transition: all 0.12s ease;
   }
 
-  /* ── RESPONSIVE ─────────────────────────── */
   @media (max-width: 700px) {
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
@@ -573,7 +558,6 @@
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">LT://PORTFOLIO</div>
   <ul class="nav-links">
@@ -585,7 +569,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div id="hero">
   <div class="hero-inner">
     <div class="hero-tag">Open to Full-Time Opportunities</div>
@@ -607,7 +590,6 @@
 
 <div class="sec-divider"></div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="sec-label">01 / About</div>
   <h2 class="sec-title">Who I Am</h2>
@@ -619,20 +601,20 @@
     </div>
     <div class="about-stats">
       <div class="stat-box">
-        <div class="stat-num">3+</div>
+        <div class="stat-num">6+</div>
         <div class="stat-label">Projects Built</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">7.0</div>
+        <div class="stat-num">7.15</div>
         <div class="stat-label">CGPA</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">8th</div>
-        <div class="stat-label">Semester</div>
+        <div class="stat-num">B.Tech</div>
+        <div class="stat-label">Graduate</div>
       </div>
       <div class="stat-box">
         <div class="stat-num">2026</div>
-        <div class="stat-label">Graduating</div>
+        <div class="stat-label">Graduated</div>
       </div>
     </div>
   </div>
@@ -640,7 +622,6 @@
 
 <div class="sec-divider"></div>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="sec-label">02 / Skills</div>
   <h2 class="sec-title">Tech Stack</h2>
@@ -752,7 +733,6 @@
 
 <div class="sec-divider"></div>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="sec-label">03 / Projects</div>
   <h2 class="sec-title">What I've Built</h2>
@@ -760,6 +740,22 @@
 
     <div class="project-card reveal">
       <div class="project-num">01</div>
+      <div class="project-title">Intelligent Crop Health Analysis System</div>
+      <div class="project-desc">
+        AI-powered web app that detects plant diseases from leaf images using a trained CNN model, 
+        helping farmers and agricultural experts identify crop health issues quickly and accurately.
+      </div>
+      <div class="project-tech">
+        <span class="tech-chip">Python</span>
+        <span class="tech-chip">Django</span>
+        <span class="tech-chip">TensorFlow</span>
+        <span class="tech-chip">Keras</span>
+        <span class="tech-chip">CNN</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">02</div>
       <div class="project-title">Real-Time Crime Prediction System</div>
       <div class="project-desc">
         Cleaned and processed real-world crime datasets, performed detailed EDA, 
@@ -775,7 +771,7 @@
     </div>
 
     <div class="project-card reveal">
-      <div class="project-num">02</div>
+      <div class="project-num">03</div>
       <div class="project-title">Driver Drowsiness Detection System</div>
       <div class="project-desc">
         Real-time computer vision system that monitors eye/face activity via webcam 
@@ -790,7 +786,7 @@
     </div>
 
     <div class="project-card reveal">
-      <div class="project-num">03</div>
+      <div class="project-num">04</div>
       <div class="project-title">Medicine Recommendation System</div>
       <div class="project-desc">
         Content-based filtering model to recommend alternative medicines. 
@@ -805,7 +801,7 @@
     </div>
 
     <div class="project-card reveal">
-      <div class="project-num">04</div>
+      <div class="project-num">05</div>
       <div class="project-title">Rahul Stationery Shop — Business Website</div>
       <div class="project-desc">
         Designed and deployed a responsive business website for a local stationery shop, 
@@ -820,7 +816,7 @@
     </div>
 
     <div class="project-card reveal">
-      <div class="project-num">05</div>
+      <div class="project-num">06</div>
       <div class="project-title">IPL Data Analysis — Power BI Dashboard</div>
       <div class="project-desc">
         Analysed historical IPL match and player data to uncover team performance trends, 
@@ -845,7 +841,7 @@
       <div>
         <div class="edu-inst">J.C. Bose University of Science & Technology, YMCA Faridabad</div>
         <div class="edu-deg">B.Tech — Computer Engineering (Data Science)</div>
-        <div><span class="edu-cgpa">CGPA: 7.0 &nbsp;|&nbsp; 8th Semester</span></div>
+        <div><span class="edu-cgpa">CGPA: 7.15</span></div>
       </div>
       <div class="edu-year">2022 – 2026</div>
     </div>
@@ -871,7 +867,6 @@
 
 <div class="sec-divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="sec-label">05 / Contact</div>
   <h2 class="sec-title">Let's Connect</h2>
@@ -881,7 +876,7 @@
     <a href="mailto:lokeshtanwar499@gmail.com" class="btn-primary">Send an Email</a>
     <div class="contact-links">
       <a href="tel:8708946499" class="contact-link">📞+91 8708946499</a>
-      <a href="https://www.linkedin.com/in/lokesh-t-0a92a826a/" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/lokesh-tanwar-0a92a826a/" target="_blank" class="contact-link">LinkedIn</a>
       <a href="https://github.com/lokeshtanwar499" target="_blank" class="contact-link">GitHub</a>
       <span class="contact-link" style="cursor:default">📍 Gurgaon, Haryana</span>
     </div>
@@ -893,7 +888,6 @@
 </footer>
 
 <script>
-  // Custom cursor
   const dot = document.getElementById('dot');
   const ring = document.getElementById('ring');
   let mx=0, my=0, rx=0, ry=0;
@@ -913,7 +907,6 @@
   }
   animRing();
 
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
@@ -926,7 +919,6 @@
 
   reveals.forEach(el => obs.observe(el));
 
-  // Active nav on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
